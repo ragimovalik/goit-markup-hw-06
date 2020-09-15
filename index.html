@@ -579,23 +579,52 @@
           <use href="./images/sprite.svg#close" />
         </svg>
         <div class="modal-form">
-          <p class="modal-form-title">
+          <h3 class="modal-form-title">
             Оставьте свои данные, мы вам перезвоним
-          </p>
-          <label class="modal-form-label" for="name">Имя </label>
-          <input class="modal-form-input" type="text" name="name" id="name" />
+          </h3>
+
+          <label class="modal-form-label" for="name"
+            >Имя
+            <div class="modal-form-input-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                name="name"
+                id="name"
+              />
+              <svg class="modal-icon" width="12" height="12">
+                <use href="./images/sprite.svg#modal-name" />
+              </svg>
+            </div>
+          </label>
+
           <label class="modal-form-label" for="tel">Телефон </label>
-          <input class="modal-form-input" type="tel" name="tel" id="tel" />
+          <div class="modal-form-input-wrapper">
+            <input class="modal-form-input" type="tel" name="tel" id="tel" />
+            <svg class="modal-icon" width="12" height="12">
+              <use href="./images/sprite.svg#modal-phone" />
+            </svg>
+          </div>
+
           <label class="modal-form-label" for="mail">Почта </label>
-          <input class="modal-form-input" type="mail" name="mail" id="mail" />
-          <label class="modal-form-label" for="comment">Комментарий </label>
-          <textarea
-            class="modal-form-comment"
-            name="comment"
-            id="comment"
-            rows="6"
-            placeholder="Введите текст"
-          ></textarea>
+
+          <div class="modal-form-input-wrapper">
+            <input class="modal-form-input" type="mail" name="mail" id="mail" />
+            <svg class="modal-icon" width="12" height="12">
+              <use href="./images/sprite.svg#modal-email" />
+            </svg>
+          </div>
+
+          <div>
+            <label class="modal-form-label" for="comment">Комментарий </label>
+            <textarea
+              class="modal-form-comment"
+              name="comment"
+              id="comment"
+              rows="6"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
           <div class="modal-form-checkbox">
             <input type="checkbox" name="checkbox" />
             <label for="checkbox">
