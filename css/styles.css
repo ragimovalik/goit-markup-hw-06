@@ -232,8 +232,8 @@ a {
   height: 50px;
   padding: 0;
   margin-top: 0;
+  border: transparent;
   border-radius: 4px;
-  outline: transparent;
 
   background-color: var(--bgc-button);
   color: var(--txt-main-inactive-foot-address);
@@ -896,10 +896,40 @@ a {
 
 .modal-closing {
   display: block;
+  margin: 0;
+  padding: 0;
 
   position: absolute;
+
   top: 8px;
   right: 8px;
+  width: 30px;
+  height: 30px;
+  border: transparent;
+  border-color: transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: none;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  text-decoration: none;
+  background-image: url(../images/svg/close.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  transition: background-image var(--transition-duration)
+    var(--transition-timing-function);
+}
+
+.modal-closing:hover {
+  background-image: url(../images/svg/close-hover.svg);
+}
+
+.modal-closing:focus {
+  background-image: url(../images/svg/close-hover.svg);
+  border: 1px solid var(--txt-inactive);
 }
 
 .modal-form {
@@ -1000,8 +1030,12 @@ a {
 }
 
 .modal-form-checkbox {
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   margin-bottom: 30px;
+
+  position: relative;
 
   text-align: center;
   font-weight: 400;
@@ -1012,13 +1046,55 @@ a {
   color: var(--txt-paragraphs);
 }
 
+.modal-form-checkbox-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form-checkbox-custom {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  background-image: url(../images/svg/modal-checkbox.svg);
+  background-size: 16px 15px, contain;
+  background-repeat: no-repeat;
+
+  transition: var(--transition-duration) var(--transition-timing-function);
+}
+
+.modal-form-checkbox-hidden:checked + .modal-form-checkbox-custom {
+  background-image: url(../images/svg/modal-checked-2.svg);
+  background-size: 16px 15px, contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.modal-form-checkbox-hidden:focus + .modal-form-checkbox-custom {
+  border: 1px solid var(--txt-inactive);
+}
+
 .modal-form-checkbox a {
   text-decoration: underline;
   color: var(--txt-inactive);
+}
+
+.modal-form-checkbox a:focus {
+  text-decoration: none;
 }
 
 .modal-form button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.modal-form button:focus {
+  outline: 1px solid var(--txt-inactive);
 }

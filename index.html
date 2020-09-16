@@ -575,9 +575,9 @@
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <svg class="modal-closing" width="30" height="30" data-modal-close>
-          <use href="./images/sprite.svg#close" />
-        </svg>
+        <button class="modal-closing" data-modal-close></button>
+
+        <!-- Modal Window - FORM -->
         <form class="modal-form">
           <h3 class="modal-form-title">
             Оставьте свои данные, мы вам перезвоним
@@ -592,7 +592,6 @@
               </svg>
             </div>
           </label>
-
           <label class="modal-form-label"
             >Телефон
             <div class="modal-form-input-wrapper">
@@ -602,7 +601,6 @@
               </svg>
             </div>
           </label>
-
           <label class="modal-form-label"
             >Почта
             <div class="modal-form-input-wrapper">
@@ -612,22 +610,27 @@
               </svg>
             </div>
           </label>
-
-          <label class="modal-form-label" for="comment">Комментарий </label>
-          <textarea
-            class="modal-form-comment"
-            name="comment"
-            id="comment"
-            rows="6"
-            placeholder="Введите текст"
-          ></textarea>
-
-          <div class="modal-form-checkbox">
-            <input type="checkbox" name="checkbox" />
-            <label for="checkbox">
-              Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
-            </label>
-          </div>
+          <label class="modal-form-label"
+            >Комментарий
+            <textarea
+              class="modal-form-comment"
+              name="comment"
+              rows="6"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <label class="modal-form-checkbox">
+            <input
+              class="modal-form-checkbox-hidden"
+              type="checkbox"
+              name="checkbox"
+            />
+            <span class="modal-form-checkbox-custom"></span>
+            <span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="">Условия договора</a></span
+            >
+          </label>
 
           <button class="button">Отправить</button>
         </form>
