@@ -348,25 +348,28 @@
           </ul>
         </div>
         <!-- Footer Right Side -->
-        <div class="footer-right-side">
-          <label class="footer-subscribing-title" for="subscribing"
-            >Подпишитесь на рассылку</label
-          >
-          <div class="footer-subscribing-input">
-            <input
-              type="email"
-              name="subscribing"
-              id="subscribing"
-              placeholder="E-mail"
-            />
-            <button class="button footer-subscribing-button" type="submit">
-              Подписаться
-              <svg width="24" height="24">
-                <use href="./images/sprite.svg#sending" />
-              </svg>
-            </button>
-          </div>
-        </div>
+        <form class="footer-right-side">
+          <label for="subscribing">
+            <span class="footer-subscribing-title"
+              >Подпишитесь на рассылку</span
+            >
+            <div class="footer-subscribing-input-wrapper">
+              <input
+                class="footer-subscribing-input"
+                type="email"
+                name="subscribing"
+                id="subscribing"
+                placeholder="E-mail"
+              />
+              <button class="button footer-subscribing-button" type="submit">
+                Подписаться
+                <svg width="24" height="24">
+                  <use href="./images/sprite.svg#sending" />
+                </svg>
+              </button>
+            </div>
+          </label>
+        </form>
       </div>
     </footer>
   </body>
