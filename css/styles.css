@@ -1056,26 +1056,27 @@ a {
   overflow: hidden;
 }
 
-.modal-form-checkbox-custom {
-  display: inline-block;
+.modal-form-checkbox-custom::before {
+  content: "";
   width: 16px;
   height: 15px;
+  display: inline-block;
 
   background-image: url(../images/svg/modal-checkbox.svg);
-  background-size: 16px 15px, contain;
+  background-size: contain;
   background-repeat: no-repeat;
 
   transition: var(--transition-duration) var(--transition-timing-function);
 }
 
-.modal-form-checkbox-hidden:checked + .modal-form-checkbox-custom {
+.modal-form-checkbox-hidden:checked + .modal-form-checkbox-custom::before {
   background-image: url(../images/svg/modal-checked-2.svg);
   background-size: 16px 15px, contain;
   background-repeat: no-repeat;
   background-origin: border-box;
 }
 
-.modal-form-checkbox-hidden:focus + .modal-form-checkbox-custom {
+.modal-form-checkbox-hidden:focus + .modal-form-checkbox-custom::before {
   border: 1px solid var(--txt-inactive);
 }
 
